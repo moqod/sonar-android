@@ -1,6 +1,6 @@
 sonarqube {
     properties {
-        def libraries = project.android.sdkDirectory.getPath() + "/platforms/android-27/android.jar"
+        def libraries = project.android.sdkDirectory.getPath() + "/platforms/android-26/android.jar"
 
         property "sonar.projectVersion", "${gitVersionName}"
         property "sonar.projectName", "${rootProject.name}"
