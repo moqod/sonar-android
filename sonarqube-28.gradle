@@ -1,8 +1,14 @@
+def lintResultFile = "$projectDir/build/outputs/lint/lint-results.xml"
+android {
+    lintOptions {
+        xmlOutput file(lintResultFile)
+    }
+}
+
 sonarqube {
     properties {
         def libraries = project.android.sdkDirectory.getPath() + "/platforms/android-28/android.jar"
 
-        property "sonar.projectVersion", "${gitVersionName}"
         property "sonar.projectName", "${rootProject.name}"
 
         property "sonar.sources", "."
